@@ -1,11 +1,11 @@
-//CONTROLADOR DE USUARIO
+//CONTROLADOR DE MEDICO
 
 module.exports = {
   listar: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> listar");
+      console.log("Llego a medicoController >> listar");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> listar",
+        mensaje: "Curso Node JS. medicoController >> listar",
       });
     } catch (error) {
       console.log(error);
@@ -14,9 +14,9 @@ module.exports = {
 
   crear: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> crear");
+      console.log("Llego a medicoController >> crear");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> crear",
+        mensaje: "Curso Node JS. medicoController >> crear",
       });
     } catch (error) {
       console.log(error);
@@ -25,9 +25,9 @@ module.exports = {
 
   listarInfo: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> listarInfo");
+      console.log("Llego a medicoController >> listarInfo");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> listarInfo",
+        mensaje: "Curso Node JS. medicoController >> listarInfo",
       });
     } catch (error) {
       console.log(error);
@@ -36,9 +36,9 @@ module.exports = {
 
   prueba: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> prueba");
+      console.log("Llego a medicoController >> prueba");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> prueba",
+        mensaje: "Curso Node JS. medicoController >> prueba",
       });
     } catch (error) {
       console.log(error);

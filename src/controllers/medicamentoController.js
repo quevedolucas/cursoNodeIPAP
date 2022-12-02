@@ -3,9 +3,9 @@
 module.exports = {
   listar: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> listar");
+      console.log("Llego a medicamentoController >> listar");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> listar",
+        mensaje: "Curso Node JS. medicamentoController >> listar",
       });
     } catch (error) {
       console.log(error);
@@ -14,9 +14,9 @@ module.exports = {
 
   crear: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> crear");
+      console.log("Llego a medicamentoController >> crear");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> crear",
+        mensaje: "Curso Node JS. medicamentoController >> crear",
       });
     } catch (error) {
       console.log(error);
@@ -25,9 +25,9 @@ module.exports = {
 
   listarInfo: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> listarInfo");
+      console.log("Llego a medicamentoController >> listarInfo");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> listarInfo",
+        mensaje: "Curso Node JS. medicamentoController >> listarInfo",
       });
     } catch (error) {
       console.log(error);
@@ -36,9 +36,9 @@ module.exports = {
 
   prueba: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> prueba");
+      console.log("Llego a medicamentoController >> prueba");
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> prueba",
+        mensaje: "Curso Node JS. medicamentoController >> prueba",
       });
     } catch (error) {
       console.log(error);
