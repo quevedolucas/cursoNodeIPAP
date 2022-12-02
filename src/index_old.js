@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 // ------------------------------- RUTAS -------------------------------
 
 app.get("/", (req, res) => {
-  res.send("Hola mundo con Node e IPAP");
+  res.send("Hola mundo con Node y Nodemon");
 });
 
 //Cuando es GET el parametro nombre se recibe por la URL
