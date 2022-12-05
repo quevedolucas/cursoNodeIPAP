@@ -1,5 +1,6 @@
 // Aplicacion basica con Express
 const express = require("express");
+const logger = require("morgan");
 const globalConstants = require("./const/globalConstants");
 const routerConfig = require("./routes/index.routes");
 
@@ -7,6 +8,7 @@ const routerConfig = require("./routes/index.routes");
 const configuracionAPI = (app) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  app.use(logger("dev"));
   return;
 };
 
