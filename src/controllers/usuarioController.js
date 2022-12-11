@@ -1,36 +1,59 @@
-//CONTROLADOR DE USUARIO
+//CONTROLADOR CON LAS RUTAS DE USUARIO
+
+const models = require("../database/models/index");
 
 module.exports = {
-  listar: async (req, res, next) => {
+  listar: async (req, res) => {
     try {
-      console.log("Llego a usuarioController >> listar");
+      const users = await models.usuario.findAll();
+
       res.json({
-        mensaje: "Curso Node JS. usuarioController >> listar",
+        success: true,
+        data: {
+          usuarios: users,
+        },
       });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      return next(err);
     }
   },
 
-  crear: async (req, res, next) => {
+  crear: async (req, res) => {
     try {
-      console.log("Llego a usuarioController >> crear");
-      res.json({
-        mensaje: "Curso Node JS. usuarioController >> crear",
+      const user = await models.usuario.create({
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
+        edad: req.body.edad,
       });
-    } catch (error) {
-      console.log(error);
+
+      res.json({
+        success: true,
+        data: {
+          id: user.id,
+        },
+      });
+    } catch (err) {
+      return next(err);
     }
   },
 
   listarInfo: async (req, res, next) => {
     try {
-      console.log("Llego a usuarioController >> listarInfo");
-      res.json({
-        mensaje: "Curso Node JS. usuarioController >> listarInfo",
+      const user = await models.usuario.findOne({
+        where: {
+          id: req.params.idUsuario,
+        },
       });
-    } catch (error) {
-      console.log(error);
+
+      res.json({
+        success: true,
+        data: {
+          usuario: user,
+        },
+      });
+    } catch (err) {
+      return next(err);
     }
   },
 
